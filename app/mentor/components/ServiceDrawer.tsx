@@ -1,7 +1,7 @@
 "use client";
 
 import { ServiceCard } from "@/components/ServiceCard";
-//
+import { useRouter } from "next/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TabLabels } from "@/data/TabData";
 import { CircleAlert } from "lucide-react";
@@ -51,6 +51,7 @@ const DigitalCard = ({ user }: UserProps) => (
   <ServiceCard service={user.ServiceData?.["Digital"]} />
 );
 export function ServiceDrawer({ user }: UserProps) {
+  const router = useRouter();
   return (
     <Tabs defaultValue="all" className="w-full  break-inside-avoid mb-4">
       {user.ServiceData === undefined ? (
@@ -59,7 +60,10 @@ export function ServiceDrawer({ user }: UserProps) {
           <h1 className="text-[#334155] w-[15vw] text-center font-semibold text-[20px] my-[3vh]">
             Temporarily out of service
           </h1>
-          <button className="bg-[#334155] text-[12px] text-white p-2 px-3 rounded-lg">
+          <button
+            className="bg-[#334155] text-[12px] text-white p-2 px-3 rounded-lg"
+            onClick={() => router.push("/mentor")}
+          >
             Find other mentors
           </button>
         </div>
