@@ -4,7 +4,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 //
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TabLabels } from "@/data/TabData";
-
+import { CircleAlert } from "lucide-react";
 interface InfoItem {
   label: string;
   value: string;
@@ -53,18 +53,30 @@ const DigitalCard = ({ user }: UserProps) => (
 export function ServiceDrawer({ user }: UserProps) {
   return (
     <Tabs defaultValue="all" className="w-full  break-inside-avoid mb-4">
-      <TabsList className="grid w-full h-full grid-cols-6 my-4 bg-[#F1F5F9] px-1 py-1 space-x-1 ">
-        {TabLabels.map((content, index) => (
-          <TabsTrigger
-            key={index}
-            value={content.value}
-            className="hover:bg-white hover:text-slate-800 text-slate-500 font-light shadow-none 
+      {user.ServiceData === undefined ? (
+        <div className="flex flex-col justify-center items-center h-[40vh]">
+          <CircleAlert color="orange" size={80} />
+          <h1 className="text-[#334155] w-[15vw] text-center font-semibold text-[20px] my-[3vh]">
+            Temporarily out of service
+          </h1>
+          <button className="bg-[#334155] text-[12px] text-white p-2 px-3 rounded-lg">
+            Find other mentors
+          </button>
+        </div>
+      ) : (
+        <TabsList className="grid w-full h-full grid-cols-6 my-4 bg-[#F1F5F9] px-1 py-1 space-x-1 ">
+          {TabLabels.map((content, index) => (
+            <TabsTrigger
+              key={index}
+              value={content.value}
+              className="hover:bg-white hover:text-slate-800 text-slate-500 font-light shadow-none 
     data-[state=active]:bg-white data-[state=active]:text-slate-800"
-          >
-            {content.title}
-          </TabsTrigger>
-        ))}
-      </TabsList>
+            >
+              {content.title}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      )}
 
       <TabsContent
         value="all"
