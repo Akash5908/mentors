@@ -57,7 +57,7 @@ export const ProfileCard = ({ users }: ProfileCardProps) => {
                 {users.name}
                 <ShieldCheck color="green" size={"20px"} />
               </CardTitle>
-              <Button className="bg-[#d8dade] text-[#0F172A] w-[7vw] h-[3.5vh] text-sm">
+              <Button className="bg-[#d8dade] text-[#0F172A] w-[7vw] h-[3.5vh] text-sm cursor-pointer">
                 20 Sessions
               </Button>
             </div>

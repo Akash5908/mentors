@@ -61,7 +61,7 @@ export function ServiceDrawer({ user }: UserProps) {
             Temporarily out of service
           </h1>
           <button
-            className="bg-[#334155] text-[12px] text-white p-2 px-3 rounded-lg"
+            className="bg-[#334155] text-[12px] text-white p-2 px-3 rounded-lg cursor-pointer"
             onClick={() => router.push("/mentor")}
           >
             Find other mentors
@@ -74,7 +74,7 @@ export function ServiceDrawer({ user }: UserProps) {
               key={index}
               value={content.value}
               className="hover:bg-white hover:text-slate-800 text-slate-500 font-light shadow-none 
-    data-[state=active]:bg-white data-[state=active]:text-slate-800"
+    data-[state=active]:bg-white data-[state=active]:text-slate-800 cursor-pointer"
             >
               {content.title}
             </TabsTrigger>

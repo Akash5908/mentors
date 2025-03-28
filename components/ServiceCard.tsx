@@ -66,7 +66,9 @@ export const ServiceCard = ({ service }: ServiceCardProps) => {
           <div className="space-y-5">
             <div className="flex justify-between">
               <CardTitle className="text-lg">{service.title}</CardTitle>
-              <Button className="bg-[#334155] text-white">View Details</Button>
+              <Button className="bg-[#334155] text-white cursor-pointer">
+                View Details
+              </Button>
             </div>
             <CardDescription className="text-[11px]">
               {service.description.split("\n").map((line, i) => (

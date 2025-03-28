@@ -52,7 +52,7 @@ export const ProfileCard = ({ users }: ProfileCardProps) => {
                   {user.name}
                   <ShieldCheck color="green" size={"20px"} />
                 </CardTitle>
-                <Button className="bg-slate-700 text-white">
+                <Button className="bg-slate-700 text-white cursor-pointer">
                   View Profile
                 </Button>
               </div>

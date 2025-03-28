@@ -18,7 +18,7 @@ const Header = () => {
           </div>
           <div className="flex gap-4">
             {role === "user" || undefined ? (
-              <button className="text-black border-[1px] text-[12px] border-slate-300 p-2 bg-[#F8FAFC] rounded-sm">
+              <button className="text-black border-[1px] text-[12px] border-slate-300 p-2 bg-[#F8FAFC] rounded-sm cursor-pointer">
                 Become a member
               </button>
             ) : (
@@ -26,7 +26,7 @@ const Header = () => {
                 <span>Switch to mentor</span>
                 <Switch
                   id="switch-mode"
-                  className="data-[state=checked]:bg-slate-800 data-[state=unchecked]:bg-slate-300"
+                  className="data-[state=checked]:bg-slate-800 data-[state=unchecked]:bg-slate-300 cursor-pointer"
                 />
               </div>
             )}

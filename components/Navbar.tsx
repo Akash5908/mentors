@@ -35,7 +35,7 @@ export const Navbar = () => {
   return (
     <div className="pt-5">
       <div className="w-[80vw] flex justify-end space-x-3">
-        <Button className="bg-slate-200">
+        <Button className="bg-slate-200 cursor-pointer">
           <Bell color="grey" />
         </Button>
 
@@ -43,7 +43,7 @@ export const Navbar = () => {
           defaultValue={role !== undefined ? role : "user"}
           onValueChange={handleProfileChange}
         >
-          <SelectTrigger className="w-[180px] border-slate-300">
+          <SelectTrigger className="w-[180px] border-slate-300 cursor-pointer">
             <SelectValue placeholder="Select a profile" />
           </SelectTrigger>
           <SelectContent className="border-slate-300">

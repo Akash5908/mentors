@@ -33,7 +33,7 @@ export const MultiSelect = ({
       <PopoverTrigger asChild>
         <Button
           variant="outline"
-          className="min-w-[120px] justify-between bg-white border-slate-300"
+          className="min-w-[120px] justify-between bg-white border-slate-300 cursor-pointer"
         >
           {title}
           <ChevronDown size={16} />
